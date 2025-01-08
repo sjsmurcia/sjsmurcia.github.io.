@@ -161,7 +161,7 @@ class Gradient {
   } 
   document.getElementById("downloadCv").addEventListener("click", function () {
   const link = document.createElement("a");
-  link.href = "img/cv/jessel-murcia-cv.pdf"; // Ruta del archivo
+  link.href = "img/cv/cv.pdf"; // Ruta del archivo
   link.download = "cv.pdf"; // Nombre del archivo descargado
   link.click();
 });
