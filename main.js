@@ -25,6 +25,8 @@ class Gradient {
       this.canvas.height = window.innerHeight;
       this.gl.viewport(0, 0, this.canvas.width, this.canvas.height);
     }
+
+    
   
     startAnimation(colors) {
       const gl = this.gl;
@@ -157,32 +159,10 @@ class Gradient {
   window.onscroll = function(){
     efectoHabilidades();
   } 
-  
-  // // Configura EmailJS
-  // emailjs.init("service_d37yham"); // Reemplaza TU_USER_ID con tu ID de EmailJS (service_d37yham).
-  
-  // // Maneja el envío del formulario
-  // document.getElementById("contactForm").addEventListener("submit", function (e) {
-  //   e.preventDefault();
-  
-  //   const name = document.getElementById("name").value;
-  //   const email = document.getElementById("email").value;
-  //   const message = document.getElementById("message").value;
-  
-  //   emailjs.send("service_d37yham", "template_ID", {
-  //     from_name: name,
-  //     from_email: email,
-  //     message: message,
-  //   })
-  //     .then(
-  //       (response) => {
-  //         alert("Mensaje enviado exitosamente!");
-  //         document.getElementById("contactForm").reset();
-  //       },
-  //       (error) => {
-  //         alert("Ocurrió un error. Por favor, intenta nuevamente.");
-  //         console.error("Error:", error);
-  //       }
-  //     );
-  // });
+  document.getElementById("downloadCv").addEventListener("click", function () {
+  const link = document.createElement("a");
+  link.href = "img/cv/jessel-murcia-cv.pdf"; // Ruta del archivo
+  link.download = "cv.pdf"; // Nombre del archivo descargado
+  link.click();
+});
   
